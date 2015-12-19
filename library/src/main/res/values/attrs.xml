@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="numberPickerPreferenceStyle" format="reference" />
+    <attr name="dropDownPreferenceStyle" format="reference" />
+
+    <declare-styleable name="NumberPickerPreference">
+        <attr name="minValue" format="integer"/>
+        <attr name="maxValue" format="integer"/>
+        <attr name="wrapSelectorWheel" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="DropDownPreference">
+        <attr name="android:entries" />
+        <attr name="android:entryValues" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Preference.DialogPreference.NumberPickerPreference">
+        <item name="dialogLayout">@layout/preference_dialog_numberpicker</item>
+    </style>
+    <style name="Preference.DialogPreference.NumberPickerPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+    </style>
+    <style name="Preference.DropDownPreference">
+    </style>
+    <style name="Preference.DropDownPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+    </style>
+    <style name="Preference.DialogPreference.CustomEditTextPreference" parent="Preference.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/preference_dialog_custom_edittext</item>
+    </style>
+    <style name="Preference.DialogPreference.CustomEditTextPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+    </style>
+    <style name="PreferencePlusThemeOverlay" parent="PreferenceThemeOverlay">
+        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference</item>
+        <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference</item>
+        <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference</item>
+    </style>
+    <style name="PreferencePlusThemeOverlay.v14" parent="PreferenceThemeOverlay.v14">
+        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference</item>
+        <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference</item>
+        <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference</item>
+    </style>
+    <style name="PreferencePlusThemeOverlay.v14.Material" parent="PreferenceThemeOverlay.v14.Material" >
+        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference.Material</item>
+        <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference.Material</item>
+        <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference.Material</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="General Settings" android:key="general"
+        android:summary="General Settings">
+        <org.ligboy.preference.NumberPickerPreference android:title="Port" android:key="port"
+            android:summary="Number Picker Preference%d"
+            app:minValue="0" app:maxValue="65535" android:defaultValue="1024" />
+        <org.ligboy.preference.DropDownPreference android:title="Method" android:key="method"
+            android:summary="@string/drop_down_summary"
+            android:entries="@array/drop_down_entries"
+            android:entryValues="@array/drop_down_entry_values"
+            android:defaultValue="3"/>
+    </PreferenceCategory>
+    <org.ligboy.preference.EditTextPreference android:key="edit" android:title="EditText Preference"
+        android:summary="Edit Text Preference%s" android:singleLine="true" android:password="true" />
+</PreferenceScreen>
