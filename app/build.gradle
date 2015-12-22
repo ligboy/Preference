@@ -26,7 +26,8 @@ ext {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile project(':library')
+    compile project(':preference')
+//    compile "org.ligboy.library:preference:0.1.0@aar"
 
     debugCompile "com.facebook.stetho:stetho:${stethoVersion}"
     debugCompile "com.facebook.stetho:stetho-js-rhino:${stethoVersion}"

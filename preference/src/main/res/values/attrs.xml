@@ -9,7 +9,9 @@
         <attr name="wrapSelectorWheel" format="boolean" />
     </declare-styleable>
     <declare-styleable name="DropDownPreference">
+        <!--suppress AndroidDomInspection -->
         <attr name="android:entries" />
+        <!--suppress AndroidDomInspection -->
         <attr name="android:entryValues" />
     </declare-styleable>
 </resources>

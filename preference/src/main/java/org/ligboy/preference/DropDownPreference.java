@@ -225,13 +225,11 @@ public class DropDownPreference extends Preference {
             mSelectedPosition = indexOfValue;
             mValue = value;
             persistString(value);
-            if (changed) {
-                notifyChanged();
-                final boolean wasBlocking = shouldDisableDependents();
-                final boolean isBlocking = shouldDisableDependents();
-                if (isBlocking != wasBlocking) {
-                    notifyDependencyChange(isBlocking);
-                }
+            notifyChanged();
+            final boolean wasBlocking = shouldDisableDependents();
+            final boolean isBlocking = shouldDisableDependents();
+            if (isBlocking != wasBlocking) {
+                notifyDependencyChange(isBlocking);
             }
         }
     }
