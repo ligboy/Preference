@@ -5,13 +5,44 @@ Preference library extends Preference support library
  * Attributable EditTextPreference  
  * NumberPickerPreference (sdk >= 14 now)  
  * DropDownPreference  
+ * SeekBarPreference
+ * SeekBarDialogPreference
  
-### Gradle Dependency  
+### Usage
+
+#### Gradle Dependency  
 ```gradle
 dependencies {
-    compile "org.ligboy.library:preference:0.1.0@aar"
+    compile "org.ligboy.library:preference:0.2.0@aar"
 }
 ```   
+
+### Usage
+Extend org.ligboy.preference.PreferenceFragment or org.ligboy.preference.PreferenceFragmentCompat, 
+implement onCreatePreferences(Bundle, String)
+```java
+public class SettingsCompatFragment extends PreferenceFragmentCompat {
+
+    public static SettingsCompatFragment newInstance() {
+        return new SettingsCompatFragment();
+    }
+
+    public SettingsCompatFragment() {
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.preference_main);
+    }
+
+}
+```
+
+#### Style & Theme
+``` 
+      <item name="preferenceTheme">@style/PreferencePlusThemeOverlay.v14.Material</item>
+```  
+
 ### LICENSE
 ```
 Copyright 2015 Ligboy Liu

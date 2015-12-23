@@ -5,7 +5,7 @@ ext {
 
     libraryGroupId = 'org.ligboy.library'
     libraryArtifactId = 'preference'
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.2.0'
 
     libraryName = 'Android Preference Support Extionsion'
     libraryDescription = 'Android Preference Support Extionsion'
