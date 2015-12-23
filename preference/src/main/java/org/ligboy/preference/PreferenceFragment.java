@@ -70,6 +70,7 @@ import android.support.v7.preference.PreferenceManager;
  *
  * @author Ligboy.Liu ligboy@gmail.com.
  */
+@SuppressWarnings("JavaDoc")
 public abstract class PreferenceFragment extends android.support.v14.preference.PreferenceFragment {
 
     private static final String DIALOG_FRAGMENT_TAG =
@@ -103,6 +104,11 @@ public abstract class PreferenceFragment extends android.support.v14.preference.
             f.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);
             return;
         } else if (preference instanceof NumberPickerPreference) {
+            f = NumberPickerPreferenceDialogFragment.newInstance(preference.getKey());
+            f.setTargetFragment(this, 0);
+            f.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);
+            return;
+        } else if (preference instanceof SeekBarDialogPreference) {
             f = NumberPickerPreferenceDialogFragment.newInstance(preference.getKey());
             f.setTargetFragment(this, 0);
             f.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);

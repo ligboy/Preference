@@ -69,6 +69,7 @@ import android.support.v7.preference.PreferenceScreen;
  *
  * @author Ligboy.Liu ligboy@gmail.com.
  */
+@SuppressWarnings("JavaDoc")
 public abstract class PreferenceFragmentCompat extends android.support.v7.preference.PreferenceFragmentCompat {
 
     private static final String DIALOG_FRAGMENT_TAG =
@@ -104,6 +105,11 @@ public abstract class PreferenceFragmentCompat extends android.support.v7.prefer
             return;
         } else if (preference instanceof NumberPickerPreference) {
             f = NumberPickerPreferenceDialogFragmentCompat.newInstance(preference.getKey());
+            f.setTargetFragment(this, 0);
+            f.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);
+            return;
+        } else if (preference instanceof SeekBarDialogPreference) {
+            f = SeekBarDialogPreferenceDialogFragmentCompat.newInstance(preference.getKey());
             f.setTargetFragment(this, 0);
             f.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);
             return;

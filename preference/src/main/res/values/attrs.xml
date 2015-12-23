@@ -2,6 +2,9 @@
 <resources>
     <attr name="numberPickerPreferenceStyle" format="reference" />
     <attr name="dropDownPreferenceStyle" format="reference" />
+    <attr name="seekBarDialogPreferenceStyle" format="reference" />
+    <!-- Default style for seekbar preferences. -->
+    <!--<attr name="seekBarPreferenceStyle" format="reference" />-->
 
     <declare-styleable name="NumberPickerPreference">
         <attr name="minValue" format="integer"/>
@@ -13,5 +16,13 @@
         <attr name="android:entries" />
         <!--suppress AndroidDomInspection -->
         <attr name="android:entryValues" />
+    </declare-styleable>
+    <declare-styleable name="SeekBarPreference">
+        <!--suppress AndroidDomInspection -->
+        <attr name="android:max" />
+    </declare-styleable>
+    <declare-styleable name="SeekBarDialogPreference">
+        <!--suppress AndroidDomInspection -->
+        <attr name="android:max" />
     </declare-styleable>
 </resources>

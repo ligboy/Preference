@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidElementNotAllowed -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="General Settings" android:key="general"
@@ -14,4 +15,8 @@
     </PreferenceCategory>
     <org.ligboy.preference.EditTextPreference android:key="edit" android:title="EditText Preference"
         android:summary="Edit Text Preference%s" android:singleLine="true" android:password="true" />
+    <org.ligboy.preference.SeekBarPreference android:key="seekbar" android:title="SeekBar Preference"
+        android:summary="SeekBar Preference: %1$d" android:max="100" />
+    <org.ligboy.preference.SeekBarDialogPreference android:key="seekbardialog" android:title="SeekBar Dialog Preference"
+        android:summary="SeekBar Dialog Preference: %1$d" android:max="100" />
 </PreferenceScreen>

@@ -6,6 +6,19 @@
     <style name="Preference.DialogPreference.NumberPickerPreference.Material">
         <item name="android:layout">@layout/preference_material</item>
     </style>
+    <style name="Preference.SeekBarPreference">
+        <item name="dialogLayout">@layout/preference_seekbar</item>
+    </style>
+    <style name="Preference.SeekBarPreference.Material">
+        <item name="android:layout">@layout/preference_seekbar_material</item>
+    </style>
+    <style name="Preference.DialogPreference.SeekBarDialogPreference">
+        <item name="dialogLayout">@layout/preference_dialog_seekbar</item>
+    </style>
+    <style name="Preference.DialogPreference.SeekBarDialogPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="dialogLayout">@layout/preference_dialog_seekbar_material</item>
+    </style>
     <style name="Preference.DropDownPreference">
     </style>
     <style name="Preference.DropDownPreference.Material">
@@ -20,16 +33,22 @@
     <style name="PreferencePlusThemeOverlay" parent="PreferenceThemeOverlay">
         <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference</item>
         <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference</item>
+        <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference</item>
+        <item name="seekBarDialogPreferenceStyle">@style/Preference.DialogPreference.SeekBarDialogPreference</item>
         <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference</item>
     </style>
     <style name="PreferencePlusThemeOverlay.v14" parent="PreferenceThemeOverlay.v14">
         <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference</item>
         <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference</item>
+        <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference</item>
+        <item name="seekBarDialogPreferenceStyle">@style/Preference.DialogPreference.SeekBarDialogPreference</item>
         <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference</item>
     </style>
     <style name="PreferencePlusThemeOverlay.v14.Material" parent="PreferenceThemeOverlay.v14.Material" >
         <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.CustomEditTextPreference.Material</item>
         <item name="numberPickerPreferenceStyle">@style/Preference.DialogPreference.NumberPickerPreference.Material</item>
+        <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference.Material</item>
+        <item name="seekBarDialogPreferenceStyle">@style/Preference.DialogPreference.SeekBarDialogPreference.Material</item>
         <item name="dropDownPreferenceStyle">@style/Preference.DropDownPreference.Material</item>
     </style>
 </resources>
