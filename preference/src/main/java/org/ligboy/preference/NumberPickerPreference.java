@@ -1,7 +1,9 @@
 package org.ligboy.preference;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.v4.content.res.TypedArrayUtils;
@@ -23,6 +25,7 @@ import android.util.AttributeSet;
  * @author Ligboy.Liu ligboy@gmail.com.
  */
 @SuppressWarnings("JavadocReference")
+@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class NumberPickerPreference extends DialogPreference {
 
     private String mSummary;
@@ -33,7 +36,8 @@ public class NumberPickerPreference extends DialogPreference {
 
     public NumberPickerPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NumberPickerPreference, defStyleAttr, defStyleRes);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NumberPickerPreference,
+                defStyleAttr, defStyleRes);
         mMinValue = a.getInt(
                 R.styleable.NumberPickerPreference_minValue, -1);
         mMaxValue = a.getInt(
